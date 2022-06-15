@@ -1,17 +1,50 @@
 /*----------------------------
       layout
  ----------------------------*/
-  
-  
-  
+
+body {
+  background: $black;
+}
+
+// main {
+//   // margin: 0 24px 0;
+// }
+
 /*----------------------------
-      ??? section
+      header section
 ----------------------------*/
-  
-  
-  
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 65.5px;
+}
+
 /*----------------------------
-      footer section 
+      hero section 
 ----------------------------*/
-  
-  
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    margin: 47.5px 24px 23px;
+
+    span {
+      color: $cyan;
+    }
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    color: $gray;
+    margin: 0 24px 32px;
+  }
+}
