@@ -48,3 +48,74 @@ body {
     margin: 0 24px 32px;
   }
 }
+
+/*----------------------------
+      features section 
+----------------------------*/
+.features {
+  margin: 144px 24px 0;
+  display: grid;
+  gap: 56px;
+
+  justify-items: center;
+
+  &__feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    background: #093f68;
+    border-radius: 45px;
+    width: 120px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 66px;
+      height: 80px;
+    }
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
+    margin: 32px 0 11px;
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    color: $gray;
+  }
+}
+
+/*----------------------------
+      pricing section 
+----------------------------*/
+
+.pricing {
+  margin: 141px 24px 0;
+  text-align: center;
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 33px;
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    color: $gray;
+    margin: 27px 0 56px;
+  }
+}
