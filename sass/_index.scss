@@ -109,13 +109,91 @@ body {
     font-size: 24px;
     font-weight: 800;
     line-height: 33px;
+    text-align: center;
   }
 
   &__paragraph {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
     color: $gray;
     margin: 27px 0 56px;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    text-align: left;
+    position: relative;
+  }
+
+  &__icon-free {
+    position: absolute;
+    width: 46px;
+    top: -23px;
+  }
+
+  &__icon-charge {
+    position: absolute;
+    width: 51px;
+    top: -33px;
+  }
+
+  &__item {
+    border-radius: 8px;
+    padding: 49px 30px 32px;
+  }
+
+  &__item--free {
+    background: $medium-blue;
+  }
+
+  &__item--charge {
+    background: $cyan;
+    position: relative;
+  }
+
+  &__heading--two {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__heading--black {
+    color: $black;
+  }
+
+  &__paragraph--two {
+    // color: $white;
+    margin: 19px 0 26px;
+    opacity: 0.6;
+  }
+
+  // &__
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: baseline;
+    gap: 15.32px;
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 55px;
+    margin: 0 0 19px;
+  }
+
+  &__perMonth {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
   }
 }
