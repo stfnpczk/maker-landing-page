@@ -6,10 +6,6 @@ body {
   background: $black;
 }
 
-// main {
-//   // margin: 0 24px 0;
-// }
-
 /*----------------------------
       header section
 ----------------------------*/
@@ -40,9 +36,6 @@ body {
   }
 
   &__paragraph {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
     text-align: center;
     color: $gray;
     margin: 0 24px 32px;
@@ -89,9 +82,6 @@ body {
   }
 
   &__paragraph {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
     text-align: center;
     color: $gray;
   }
@@ -157,17 +147,10 @@ body {
     line-height: 25px;
   }
 
-  &__heading--black {
-    color: $black;
-  }
-
   &__paragraph--two {
-    // color: $white;
     margin: 19px 0 26px;
     opacity: 0.6;
   }
-
-  // &__
 
   &__features {
     display: flex;
@@ -195,5 +178,41 @@ body {
     font-size: 15px;
     line-height: 25px;
     font-weight: 500;
+  }
+}
+
+.cta {
+  margin: 144px 24px 164px;
+
+  &__heading {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    background: #093f68;
+    margin: 31px 0 24px;
+
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &__error-message {
+    display: none;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $red;
+  }
+
+  &__button {
+    background: $cyan;
+    color: $black;
   }
 }
