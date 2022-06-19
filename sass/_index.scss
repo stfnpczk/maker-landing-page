@@ -2,8 +2,15 @@
       layout
  ----------------------------*/
 
-body {
+ body {
   background: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-wrapper {
+  max-width: 500px;
 }
 
 /*----------------------------
