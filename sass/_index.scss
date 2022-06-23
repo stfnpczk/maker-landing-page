@@ -31,7 +31,8 @@
   }
 
   @media only screen and (min-width: $desktop) {
-    margin: 81px clamp(39px, 11.5vw, 165px) 0;
+    // margin: 81px clamp(39px, 11.5vw, 165px) 114px;
+    margin: 81px 63px 137px;
   }
 }
 
@@ -44,11 +45,21 @@
   flex-direction: column;
   align-items: center;
 
+  @media only screen and (min-width: $desktop) {
+    width: 540px;
+    margin: 0 auto;
+  }
+
   &__heading {
     font-size: 32px;
     line-height: 40px;
     text-align: center;
     margin: 47.5px 24px 23px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
 
     span {
       color: $cyan;
@@ -59,7 +70,19 @@
     text-align: center;
     color: $gray;
     margin: 0 24px 32px;
+
+    @media only screen and (min-width: $tablet) {
+      max-width: 696px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      margin: 0 0 64px
+    }
   }
+
+  // &__image--scroll {
+  //   padding: 0 0 91px;
+  // }
 
   @media only screen and (min-width: $tablet) {
     background: url(../assets/bg-hero-squiggle.svg) no-repeat;
@@ -73,7 +96,6 @@
   width: 100%;
   content: " ";
   background: url(../assets/illustration-hero-mobile.png) no-repeat;
-  // background-image: url(/img/border-left3.png);
   background-size: clamp(410px, 109.3333333333vw, 546.667px);
   height: clamp(233px, 62.1333333333vw, 310.65px);
 
@@ -83,6 +105,15 @@
     position: absolute;
     left: -169px;
     height: 356px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    left: -53px;
+    background-size: 408px ;
+    height: 459px;
+    z-index: -1;
+    // margin: -24px;
+    // position: relative;
   }
 }
 
@@ -96,6 +127,14 @@
     background-position: right;
     right: -171px;
     height: 356px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    right: -60px;
+    height: 444px;
+    background-size: 396px;
+    z-index: -1;
+
   }
 }
 
