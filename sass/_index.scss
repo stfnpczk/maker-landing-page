@@ -311,6 +311,10 @@
     @media only screen and (min-width: $tablet) {
       width: clamp(540px, 70.3125vw, 70.3125vw);
     }
+
+    @media only screen and (min-width: $desktop) {
+      width: clamp(540px, 37.5vw, 37.5vw);
+    }
   }
 
   &__container {
@@ -322,6 +326,10 @@
 
     @media only screen and (min-width: $tablet) {
       width: clamp(445px, 57.9427083333vw, 57.9427083333vw);
+    }
+
+    @media only screen and (min-width: $desktop) {
+      flex-direction: row;
     }
   }
 
@@ -344,11 +352,19 @@
 
   &__item--free {
     background: $medium-blue;
+    
+    // @media only screen and (min-width: $desktop) {
+    //   align-self: center;
+    // }
   }
 
   &__item--charge {
     background: $cyan;
     position: relative;
+
+    @media only screen and (min-width: $desktop) {
+      // height: 410px;
+    }
   }
 
   &__heading--two {
