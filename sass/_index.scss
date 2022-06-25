@@ -76,7 +76,7 @@
     }
 
     @media only screen and (min-width: $desktop) {
-      margin: 0 0 64px
+      margin: 0 0 64px;
     }
   }
 
@@ -109,7 +109,7 @@
 
   @media only screen and (min-width: $desktop) {
     left: -53px;
-    background-size: 408px ;
+    background-size: 408px;
     height: 459px;
     z-index: -1;
     // margin: -24px;
@@ -134,7 +134,6 @@
     height: 444px;
     background-size: 396px;
     z-index: -1;
-
   }
 }
 
@@ -156,10 +155,10 @@
   @media only screen and (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 48px 1fr 48px;
-    margin:202px 0 0 ;
+    margin: 202px 0 0;
 
     row-gap: 0;
-    column-gap: 30px ;
+    column-gap: 30px;
   }
 
   &__feature-container {
@@ -330,6 +329,7 @@
 
     @media only screen and (min-width: $desktop) {
       flex-direction: row;
+      width: clamp(920px, 63.8888888889vw, 63.8888888889vw);
     }
   }
 
@@ -348,11 +348,15 @@
   &__item {
     border-radius: 8px;
     padding: 49px 30px 32px;
+
+    @media only screen and (min-width: $desktop) {
+      flex: 50%;
+    }
   }
 
   &__item--free {
     background: $medium-blue;
-    
+
     // @media only screen and (min-width: $desktop) {
     //   align-self: center;
     // }
@@ -409,10 +413,20 @@
 .cta {
   margin: 144px 24px 164px;
 
+  @media only screen and (min-width: $desktop) {
+    width: clamp(730px, 50.6944444444vw, 50.6944444444vw);
+    margin: 144px auto 164px;
+  }
+
   &__heading {
     font-size: 24px;
     line-height: 33px;
     text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 32px;
+      line-height: 44px;
+    }
   }
 
   &__form {
@@ -436,6 +450,10 @@
       margin: 0;
       width: clamp(284px, 36.6666666667vw, 41.6666666667vw);
     }
+
+    @media only screen and (min-width: $desktop) {
+      width: clamp(320px, 22.2222222222vw, 2.2222222222vw);
+    }
   }
 
   &__error-message {
@@ -454,5 +472,11 @@
     @media only screen and (min-width: $tablet) {
       width: clamp(140px, 18.2291666667vw, 18.2291666667vw);
     }
+
+    @media only screen and (min-width: $desktop) {
+      width: clamp(140px, 9.7222222222vw, 9.7222222222vw);
+    }
+
+    
   }
 }
