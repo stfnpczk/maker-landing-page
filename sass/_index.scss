@@ -2,11 +2,11 @@
       layout
  ----------------------------*/
 
- body {
+body {
   background: $black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
 }
 
 .page-wrapper {
@@ -155,8 +155,8 @@
   @media only screen and (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 48px 1fr 48px;
-    margin: 202px 0 0;
-
+    margin: 202px auto 0;
+    max-width: clamp(1110px, 77.0833333333vw, 77.0833333333vw);
     row-gap: 0;
     column-gap: 30px;
   }
@@ -348,6 +348,7 @@
   &__item {
     border-radius: 8px;
     padding: 49px 30px 32px;
+    position: relative;
 
     @media only screen and (min-width: $desktop) {
       flex: 50%;
@@ -357,9 +358,9 @@
   &__item--free {
     background: $medium-blue;
 
-    // @media only screen and (min-width: $desktop) {
-    //   align-self: center;
-    // }
+    @media only screen and (min-width: $desktop) {
+      margin: 12px 0;
+    }
   }
 
   &__item--charge {
@@ -411,11 +412,25 @@
 }
 
 .cta {
-  margin: 144px 24px 164px;
+  margin: 144px 0 164px;
+  padding: 24px;
+  background: url(../assets/bg-footer-squiggle.svg) no-repeat;
+  background-size: 584px 80px;
+  background-position: top center;
+
+  @media only screen and (min-width: $tablet) {
+    background-size: 1022px 144px;
+    background-position: top right -14px;
+  }
 
   @media only screen and (min-width: $desktop) {
-    width: clamp(730px, 50.6944444444vw, 50.6944444444vw);
-    margin: 144px auto 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-size: 1665px 225px;
+    background-position: top center;
+    height: 228px;
   }
 
   &__heading {
@@ -476,7 +491,5 @@
     @media only screen and (min-width: $desktop) {
       width: clamp(140px, 9.7222222222vw, 9.7222222222vw);
     }
-
-    
   }
 }
