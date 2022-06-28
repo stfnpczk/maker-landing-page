@@ -1,12 +1,20 @@
 /*----------------------------
-      layout
+      layout
  ----------------------------*/
 
-body {
+ body {
   background: $black;
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  align-items: center;
+
+  @media only screen and (min-width: $tablet) {
+    align-items: unset; //
+  }
+
+  @media only screen and (min-width: 1600px) {
+    align-items: center;
+  }
 }
 
 .page-wrapper {
@@ -15,10 +23,24 @@ body {
   @media only screen and (min-width: $tablet) {
     max-width: unset;
   }
+
+  @media only screen and (min-width: 1600px) {
+    // max-width: 1600px;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+  }
+}
+
+main {
+  @media only screen and (min-width: 1600px) {
+    position: relative;
+  }
 }
 
 /*----------------------------
-      header section
+      header section
 ----------------------------*/
 .header {
   display: flex;
@@ -31,13 +53,13 @@ body {
   }
 
   @media only screen and (min-width: $desktop) {
+    margin: 81px 165px 137px;
     // margin: 81px clamp(39px, 11.5vw, 165px) 114px;
-    margin: 81px 63px 137px;
   }
 }
 
 /*----------------------------
-      hero section 
+      hero section 
 ----------------------------*/
 
 .hero {
@@ -46,7 +68,7 @@ body {
   align-items: center;
 
   @media only screen and (min-width: $desktop) {
-    width: 540px;
+    width: clamp(540px, 37.5vw, 1342px);
     margin: 0 auto;
   }
 
@@ -112,8 +134,10 @@ body {
     background-size: 408px;
     height: 459px;
     z-index: -1;
-    // margin: -24px;
-    // position: relative;
+  }
+
+  @media only screen and (min-width: $max-width) {
+    left: -165px;
   }
 }
 
@@ -135,10 +159,15 @@ body {
     background-size: 396px;
     z-index: -1;
   }
+
+  @media only screen and (min-width: $max-width) {
+    right: -165px;
+
+  }
 }
 
 /*----------------------------
-      features section 
+      features section 
 ----------------------------*/
 .features {
   margin: 144px 24px 0;
@@ -156,7 +185,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 48px 1fr 48px;
     margin: 202px auto 0;
-    max-width: clamp(1110px, 77.0833333333vw, 77.0833333333vw);
+    max-width: clamp(1110px, 77.0833333333vw, 1233px);
     row-gap: 0;
     column-gap: 30px;
   }
@@ -173,7 +202,7 @@ body {
 
     @media only screen and (min-width: $desktop) {
       flex-direction: column;
-      width: clamp(255px, 17.7083333333vw, 17.7083333333vw);
+      width: clamp(255px, 17.7083333333vw, 285px);
       align-items: flex-start;
     }
   }
@@ -257,7 +286,7 @@ body {
 
     @media only screen and (min-width: $tablet) {
       text-align: left;
-      width: clamp(340px, 44.2708333333vw, 44.2708333333vw);
+      width: clamp(340px, 44.2708333333vw, 111px);
     }
 
     @media only screen and (min-width: $desktop) {
@@ -282,7 +311,7 @@ body {
 }
 
 /*----------------------------
-      pricing section 
+      pricing section 
 ----------------------------*/
 
 .pricing {
@@ -329,7 +358,7 @@ body {
 
     @media only screen and (min-width: $desktop) {
       flex-direction: row;
-      width: clamp(920px, 63.8888888889vw, 63.8888888889vw);
+      width: clamp(920px, 63.8888888889vw, 1600px);
     }
   }
 
@@ -412,6 +441,11 @@ body {
 }
 
 .cta {
+
+  display: flex;
+  align-items: cener;
+  flex-direction: column;
+
   margin: 144px 0 164px;
   padding: 24px;
   background: url(../assets/bg-footer-squiggle.svg) no-repeat;
@@ -424,7 +458,7 @@ body {
   }
 
   @media only screen and (min-width: $desktop) {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -447,18 +481,19 @@ body {
   &__form {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    
 
     @media only screen and (min-width: $tablet) {
+      position: relative;
       flex-direction: row;
       gap: 16px;
       margin: 29px auto 0;
-      justify-content: center;
     }
   }
 
   &__input {
     background: #093f68;
-    margin: 31px 0 24px;
     color: rgba(255, 255, 255, 0.4);
 
     @media only screen and (min-width: $tablet) {
@@ -467,7 +502,7 @@ body {
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(320px, 22.2222222222vw, 2.2222222222vw);
+      width: clamp(320px, 22.2222222222vw, 22.2222222222vw);
     }
   }
 
@@ -478,6 +513,14 @@ body {
     letter-spacing: 0px;
     text-align: left;
     color: $red;
+    margin: -12px 0 -12px 18px;
+
+    @media only screen and (min-width: $tablet) {
+      position:absolute;
+      top: 56px;
+      margin: 0;
+      left: 18px;
+    }
   }
 
   &__button {
