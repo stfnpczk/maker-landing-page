@@ -1,15 +1,17 @@
 const form = document.getElementById("js-form");
+const errorMessage = document.querySelector(".js-error-message");
 
-function submitEmail(e) {
-  e.preventDefault();
-  const errorMessage = this.querySelector(".js-error-message");
+const submitEmail = (event) => {
+  event.preventDefault();
 
-  if (!checkEmail(e.target.email.value)) {
+  if (!checkEmail(event.target.email.value)) {
     errorMessage.style.display = "block";
+    form.classList.add("error");
   } else {
     errorMessage.style.display = "none";
+    form.classList.remove("error");
   }
-}
+};
 
 const checkEmail = (email) => {
   return email.match(
@@ -17,6 +19,4 @@ const checkEmail = (email) => {
   );
 };
 
-
-  form.addEventListener("submit", submitEmail);
-
+form.addEventListener("submit", submitEmail);
