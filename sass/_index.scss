@@ -2,7 +2,7 @@
       layout
  ----------------------------*/
 
- body {
+body {
   background: $black;
   display: flex;
   flex-direction: column;
@@ -162,7 +162,6 @@ main {
 
   @media only screen and (min-width: $max-width) {
     right: -165px;
-
   }
 }
 
@@ -441,7 +440,6 @@ main {
 }
 
 .cta {
-
   display: flex;
   align-items: cener;
   flex-direction: column;
@@ -482,7 +480,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    
+    margin: 31px 0 0;
 
     @media only screen and (min-width: $tablet) {
       position: relative;
@@ -493,8 +491,9 @@ main {
   }
 
   &__input {
-    background: #093f68;
-    color: rgba(255, 255, 255, 0.4);
+    background: $medium-blue;
+    // color: rgba(255, 255, 255, 0.4);
+    color: white;
 
     @media only screen and (min-width: $tablet) {
       margin: 0;
@@ -502,8 +501,12 @@ main {
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(320px, 22.2222222222vw, 22.2222222222vw);
+      width: clamp(320px, 22.2222222222vw, 700px);
     }
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.4);
   }
 
   &__error-message {
@@ -516,11 +519,15 @@ main {
     margin: -12px 0 -12px 18px;
 
     @media only screen and (min-width: $tablet) {
-      position:absolute;
+      position: absolute;
       top: 56px;
       margin: 0;
       left: 18px;
     }
+  }
+
+  &__form.error &__input {
+    border: 2px solid $red;
   }
 
   &__button {
@@ -532,7 +539,13 @@ main {
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(140px, 9.7222222222vw, 9.7222222222vw);
+      width: clamp(140px, 9.7222222222vw, 300px);
     }
+  }
+
+  &__button:hover {
+    background: transparent;
+    border: 2px solid $cyan;
+    color: white;
   }
 }
