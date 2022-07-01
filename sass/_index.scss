@@ -12,29 +12,27 @@ body {
     align-items: unset; //
   }
 
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 100rem) {
     align-items: center;
   }
 }
 
 .page-wrapper {
-  max-width: 500px;
+  max-width: 31.25rem;
 
   @media only screen and (min-width: $tablet) {
     max-width: unset;
   }
 
-  @media only screen and (min-width: 1600px) {
-    // max-width: 1600px;
-    // margin: 0 auto;
+  @media only screen and (min-width: 100rem) {
     display: flex;
     flex-direction: column;
-    max-width: 1600px;
+    max-width: 100rem;
   }
 }
 
 main {
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 100rem) {
     position: relative;
   }
 }
@@ -45,16 +43,15 @@ main {
 .header {
   display: flex;
   justify-content: center;
-  margin: 40px 0 65.5px;
+  margin: 2.5rem 0 4.0938rem;
 
   @media only screen and (min-width: $tablet) {
     justify-content: flex-start;
-    margin: 48px 39px 77px;
+    margin: 3rem 2.4375rem 4.8125rem;
   }
 
   @media only screen and (min-width: $desktop) {
-    margin: 81px 165px 137px;
-    // margin: 81px clamp(39px, 11.5vw, 165px) 114px;
+    margin: 5.0625rem 10.3125rem 0;
   }
 }
 
@@ -68,19 +65,19 @@ main {
   align-items: center;
 
   @media only screen and (min-width: $desktop) {
-    width: clamp(540px, 37.5vw, 1342px);
+    width: clamp(33.75rem, 37.5vw, 83.875rem);
     margin: 0 auto;
   }
 
   &__heading {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     text-align: center;
-    margin: 47.5px 24px 23px;
+    margin: 2.9688rem 1.5rem 1.4375rem;
 
     @media only screen and (min-width: $desktop) {
-      font-size: 48px;
-      line-height: 56px;
+      font-size: 3rem;
+      line-height: 3.5rem;
     }
 
     span {
@@ -91,26 +88,30 @@ main {
   &__paragraph {
     text-align: center;
     color: $gray;
-    margin: 0 24px 32px;
+    margin: 0 1.5rem 2rem;
 
     @media only screen and (min-width: $tablet) {
-      max-width: 696px;
+      max-width: 43.5rem;
     }
 
     @media only screen and (min-width: $desktop) {
-      margin: 0 0 64px;
+      margin: 0 0 4rem;
     }
   }
 
-  // &__image--scroll {
-  //   padding: 0 0 91px;
-  // }
-
   @media only screen and (min-width: $tablet) {
     background: url(../assets/bg-hero-squiggle.svg) no-repeat;
-    background-size: 337px;
+    background-size: 21.0625rem;
     background-position: center;
-    padding: 0 129px 0;
+    padding: 8.5625rem 8.0625rem 0;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    background: url(../assets/bg-hero-squiggle.svg) no-repeat;
+    background-size: 34rem 23.5625rem;
+    background-position: center top 6.1875rem;
+    height: 23.75rem;
+    // top: -0.0625rem;
   }
 }
 
@@ -118,26 +119,27 @@ main {
   width: 100%;
   content: " ";
   background: url(../assets/illustration-hero-mobile.png) no-repeat;
-  background-size: clamp(410px, 109.3333333333vw, 546.667px);
-  height: clamp(233px, 62.1333333333vw, 310.65px);
+  background-size: clamp(25.625rem, 109.3333333333vw, 34.1667rem);
+  height: clamp(14.5625rem, 62.1333333333vw, 19.4156rem);
 
   @media only screen and (min-width: $tablet) {
     background: url(../assets/illustration-hero-left.svg) no-repeat;
-    background-size: 314px;
+    background-size: 19.625rem;
     position: absolute;
-    left: -169px;
-    height: 356px;
+    left: -10.5625rem;
+    height: 22.25rem;
   }
 
   @media only screen and (min-width: $desktop) {
-    left: -53px;
-    background-size: 408px;
-    height: 459px;
+    left: -3.3125rem;
+    background-size: 25.5rem;
+    height: 28.6875rem;
     z-index: -1;
+    margin: -1.0625rem 0 0;
   }
 
   @media only screen and (min-width: $max-width) {
-    left: -165px;
+    left: -10.3125rem;
   }
 }
 
@@ -147,21 +149,22 @@ main {
     content: " ";
     position: absolute;
     background: url(../assets/illustration-hero-right.svg) no-repeat;
-    background-size: 317px;
+    background-size: 19.8125rem;
     background-position: right;
-    right: -171px;
-    height: 356px;
+    right: -10.6875rem;
+    height: 22.25rem;
   }
 
   @media only screen and (min-width: $desktop) {
-    right: -60px;
-    height: 444px;
-    background-size: 396px;
+    right: -3.75rem;
+    height: 27.75rem;
+    background-size: 24.75rem;
     z-index: -1;
+    margin: -0.5625rem 0 0;
   }
 
   @media only screen and (min-width: $max-width) {
-    right: -165px;
+    right: -10.3125rem;
   }
 }
 
@@ -169,24 +172,23 @@ main {
       features section 
 ----------------------------*/
 .features {
-  margin: 144px 24px 0;
+  margin: 9rem 1.5rem 0;
   display: grid;
-  row-gap: 56px;
+  row-gap: 3.5rem;
   justify-items: center;
 
   @media only screen and (min-width: $tablet) {
-    grid-template-columns: 58px 1fr 58px;
-    margin: 109px clamp(97px, 12.6302083333vw, 12.6302083333vw) 141px;
-    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3.625rem 1fr 3.625rem;
+    margin: 6.8125rem clamp(6.0625rem, 12.6302083333vw, 12.6302083333vw) 8.8125rem;
   }
 
   @media only screen and (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 48px 1fr 48px;
-    margin: 202px auto 0;
-    max-width: clamp(1110px, 77.0833333333vw, 1233px);
+    grid-template-rows: 3rem 1fr 3rem;
+    margin: 16.125rem auto 0;
+    max-width: clamp(69.375rem, 77.0833333333vw, 77.0625rem);
     row-gap: 0;
-    column-gap: 30px;
+    column-gap: 1.875rem;
   }
 
   &__feature-container {
@@ -196,13 +198,14 @@ main {
 
     @media only screen and (min-width: $tablet) {
       flex-direction: row;
-      gap: 56px;
+      gap: 3.5rem;
     }
 
     @media only screen and (min-width: $desktop) {
       flex-direction: column;
-      width: clamp(255px, 17.7083333333vw, 285px);
+      width: clamp(15.9375rem, 17.7083333333vw, 17.8125rem);
       align-items: flex-start;
+      gap: 3rem;
     }
   }
 
@@ -228,56 +231,56 @@ main {
 
   &__image {
     background: #093f68;
-    border-radius: 45px;
-    width: 120px;
-    height: 124px;
+    border-radius: 2.8125rem;
+    width: 7.5rem;
+    height: 7.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media only screen and (min-width: $desktop) {
-      width: 160px;
-      height: 164px;
+      width: 10rem;
+      height: 10.25rem;
     }
   }
 
   &__icon-cat {
-    width: 66px;
-    height: 80px;
+    width: 4.125rem;
+    height: 5rem;
 
     @media only screen and (min-width: $desktop) {
-      width: 88px;
-      height: 108px;
+      width: 5.5rem;
+      height: 6.75rem;
     }
   }
 
   &__icon-jar {
-    width: 56px;
-    height: 67px;
+    width: 3.5rem;
+    height: 4.1875rem;
 
     @media only screen and (min-width: $desktop) {
-      width: 74px;
-      height: 89px;
+      width: 4.625rem;
+      height: 5.5625rem;
     }
   }
 
   &__icon-cocktail {
-    width: 60px;
-    height: 77px;
+    width: 3.75rem;
+    height: 4.8125rem;
 
     @media only screen and (min-width: $desktop) {
-      width: 80px;
-      height: 94px;
+      width: 5rem;
+      height: 5.875rem;
     }
   }
 
   &__icon-car {
-    width: 78px;
-    height: 56px;
+    width: 4.875rem;
+    height: 3.5rem;
 
     @media only screen and (min-width: $desktop) {
-      width: 104px;
-      height: 74px;
+      width: 6.5rem;
+      height: 4.625rem;
     }
   }
   &__text {
@@ -285,7 +288,7 @@ main {
 
     @media only screen and (min-width: $tablet) {
       text-align: left;
-      width: clamp(340px, 44.2708333333vw, 111px);
+      width: clamp(21.25rem, 44.2708333333vw, 6.9375rem);
     }
 
     @media only screen and (min-width: $desktop) {
@@ -294,13 +297,13 @@ main {
   }
 
   &__heading {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 800;
-    line-height: 25px;
-    margin: 32px 0 11px;
+    line-height: 1.5625rem;
+    margin: 2rem 0 0.6875rem;
 
     @media only screen and (min-width: $tablet) {
-      margin: 0 0 11px;
+      margin: 0 0 1.5rem;
     }
   }
 
@@ -314,7 +317,7 @@ main {
 ----------------------------*/
 
 .pricing {
-  margin: 141px 24px 0;
+  margin: 8.8125rem 1.5rem 0;
   text-align: center;
 
   @media only screen and (min-width: $tablet) {
@@ -323,63 +326,77 @@ main {
     align-items: center;
   }
 
+  @media only screen and (min-width: $desktop) {
+    margin: 12.625rem 1.5rem 0;
+  }
+
   &__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 800;
-    line-height: 33px;
+    line-height: 2.0625rem;
     text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 2rem;
+      line-height: 2.75rem;
+    }
   }
 
   &__paragraph {
     color: $gray;
-    margin: 27px 0 56px;
+    margin: 1.4375rem 0 3.5rem;
     text-align: center;
 
     @media only screen and (min-width: $tablet) {
-      width: clamp(540px, 70.3125vw, 70.3125vw);
+      width: clamp(33.75rem, 70.3125vw, 70.3125vw);
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(540px, 37.5vw, 37.5vw);
+      width: clamp(33.75rem, 37.5vw, 37.5vw);
+      margin: 1.1875rem 0 6.875rem;
     }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 67px;
+    gap: 4.1875rem;
     text-align: left;
     position: relative;
 
     @media only screen and (min-width: $tablet) {
-      width: clamp(445px, 57.9427083333vw, 57.9427083333vw);
+      width: clamp(27.8125rem, 57.9427083333vw, 57.9427083333vw);
     }
 
     @media only screen and (min-width: $desktop) {
       flex-direction: row;
-      width: clamp(920px, 63.8888888889vw, 1600px);
+      width: clamp(57.5rem, 63.8888888889vw, 100rem);
+      gap: 1.875rem;
     }
   }
 
   &__icon-free {
     position: absolute;
-    width: 46px;
-    top: -23px;
+    width: 2.875rem;
+    top: -1.4375rem;
+    left: 2.3125rem;
   }
 
   &__icon-charge {
     position: absolute;
-    width: 51px;
-    top: -33px;
+    width: 3.1875rem;
+    top: -2.0625rem;
+    left: 2.3125rem;
   }
 
   &__item {
-    border-radius: 8px;
-    padding: 49px 30px 32px;
+    border-radius: 0.5rem;
+    padding: 3.0625rem 1.875rem 2rem;
     position: relative;
 
     @media only screen and (min-width: $desktop) {
       flex: 50%;
+      padding: 3.0625rem 2.3125rem 2.875rem;
     }
   }
 
@@ -387,7 +404,7 @@ main {
     background: $medium-blue;
 
     @media only screen and (min-width: $desktop) {
-      margin: 12px 0;
+      margin: 0.75rem 0;
     }
   }
 
@@ -396,45 +413,45 @@ main {
     position: relative;
 
     @media only screen and (min-width: $desktop) {
-      // height: 410px;
+      padding: 3.75rem 2.3125rem 2.875rem;
     }
   }
 
   &__heading--two {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
   }
 
   &__paragraph--two {
-    margin: 19px 0 26px;
+    margin: 1.1875rem 0 1.625rem;
     opacity: 0.6;
   }
 
   &__features {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   &__feature {
     display: flex;
     align-items: baseline;
-    gap: 15.32px;
+    gap: 0.9575rem;
   }
 
   &__amount {
     display: flex;
     align-items: center;
-    gap: 7.5px;
-    font-size: 40px;
+    gap: 0.4688rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    line-height: 55px;
-    margin: 0 0 19px;
+    line-height: 3.4375rem;
+    margin: 0 0 1.1875rem;
   }
 
   &__perMonth {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     font-weight: 500;
   }
 }
@@ -444,15 +461,15 @@ main {
   align-items: cener;
   flex-direction: column;
 
-  margin: 144px 0 164px;
-  padding: 24px;
+  margin: 9rem 0 10.25rem;
+  padding: 1.5rem;
   background: url(../assets/bg-footer-squiggle.svg) no-repeat;
-  background-size: 584px 80px;
+  background-size: 36.5rem 5rem;
   background-position: top center;
 
   @media only screen and (min-width: $tablet) {
-    background-size: 1022px 144px;
-    background-position: top right -14px;
+    background-size: 63.875rem 9rem;
+    background-position: top right -0.875rem;
   }
 
   @media only screen and (min-width: $desktop) {
@@ -460,48 +477,52 @@ main {
     flex-direction: column;
     align-items: center;
 
-    background-size: 1665px 225px;
-    background-position: top center;
-    height: 228px;
+    background-size: 104.0625rem 14.0625rem;
+    background-position: top 0.6875rem left -13.875rem;
+    height: 14.25rem;
+    padding: 3.75rem 0 10.25rem;
   }
 
   &__heading {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
     text-align: center;
 
     @media only screen and (min-width: $desktop) {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: 2rem;
+      line-height: 2.75rem;
     }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin: 31px 0 0;
+    gap: 1.5rem;
+    margin: 1.9375rem 0 0;
 
     @media only screen and (min-width: $tablet) {
       position: relative;
       flex-direction: row;
-      gap: 16px;
-      margin: 29px auto 0;
+      gap: 1rem;
+      margin: 1.8125rem auto 0;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      margin: 2.6875rem auto 0;
     }
   }
 
   &__input {
     background: $medium-blue;
-    // color: rgba(255, 255, 255, 0.4);
     color: white;
 
     @media only screen and (min-width: $tablet) {
       margin: 0;
-      width: clamp(284px, 36.6666666667vw, 41.6666666667vw);
+      width: clamp(17.75rem, 36.6666666667vw, 41.6666666667vw);
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(320px, 22.2222222222vw, 700px);
+      width: clamp(17.6875rem, 17.75rem, 43.75rem);
     }
   }
 
@@ -511,23 +532,23 @@ main {
 
   &__error-message {
     display: none;
-    font-size: 12px;
-    line-height: 25px;
-    letter-spacing: 0px;
+    font-size: 0.75rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0rem;
     text-align: left;
     color: $red;
-    margin: -12px 0 -12px 18px;
+    margin: -0.75rem 0 -0.75rem 1.125rem;
 
     @media only screen and (min-width: $tablet) {
       position: absolute;
-      top: 56px;
+      top: 3.5rem;
       margin: 0;
-      left: 18px;
+      left: 1.125rem;
     }
   }
 
   &__form.error &__input {
-    border: 2px solid $red;
+    border: 0.125rem solid $red;
   }
 
   &__button {
@@ -535,17 +556,17 @@ main {
     color: $black;
 
     @media only screen and (min-width: $tablet) {
-      width: clamp(140px, 18.2291666667vw, 18.2291666667vw);
+      width: clamp(8.75rem, 18.2291666667vw, 18.2291666667vw);
     }
 
     @media only screen and (min-width: $desktop) {
-      width: clamp(140px, 9.7222222222vw, 300px);
+      width: clamp(8.75rem, 9.7222222222vw, 18.75rem);
     }
   }
 
   &__button:hover {
     background: transparent;
-    border: 2px solid $cyan;
+    border: 0.125rem solid $cyan;
     color: white;
   }
 }

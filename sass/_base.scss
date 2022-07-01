@@ -6,9 +6,9 @@ $black: #080c20;
 $red: #ff2965;
 
 
-$tablet: 768px;
-$desktop: 1200px;
-$max-width: 1600px;
+$tablet: 48rem;
+$desktop: 75rem;
+$max-width: 100rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
 
@@ -30,8 +30,8 @@ h6 {
 }
 
 p {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
 }
 
 img {
